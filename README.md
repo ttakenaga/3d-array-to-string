@@ -1,4 +1,4 @@
-# array-to-string
+# 3d-array-to-string
 
 A small library which converts an array to a string.
 
@@ -6,7 +6,7 @@ A small library which converts an array to a string.
 
 ### Install
 
-Install via npm or yarn: `npm install array-to-string`
+Install via npm or yarn: `npm install 3d-array-to-string`
 
 ### Example
 
@@ -27,7 +27,7 @@ Install via npm or yarn: `npm install array-to-string`
 ```js
 import arrayToString from "array-to-string";
 // OR:
-// const arrayToString = require('array-to-string').arrayToString;
+// const arrayToString = require('3d-array-to-string').arrayToString;
 
 const array = [
   1, 1, 1, 1, 1, 0, 2, 3, 0, 3, 0, 2, 2, 0, 0, 0, 0, 2, 2, 0, 1, 0, 0, 2, 2, 1,

@@ -1,0 +1,12 @@
+{
+  "files": ["index.ts"],
+  "compilerOptions": {
+    "typeRoots": [],
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "module": "commonjs",
+    "newLine": "LF",
+    "strictNullChecks": true,
+    "declaration": true
+  }
+}

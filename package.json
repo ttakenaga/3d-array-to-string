@@ -1,0 +1,18 @@
+{
+  "name": "3d-array-to-string",
+  "version": "1.0.0",
+  "description": "Convert an array to a string",
+  "repository": "https://github.com/ttakenaga/3d-array-to-string.git",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prettier": "prettier --write *.ts *.js"
+  },
+  "author": "Tomomi Takenaga",
+  "license": "MIT",
+  "runkitExampleFilename": "example.js",
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}
