@@ -25,7 +25,7 @@ Install via npm or yarn: `npm install 3d-array-to-string`
 - `spaceSeparation`: slice separator string
 
 ```js
-import arrayToString from "array-to-string";
+import { arrayToString } from "array-to-string";
 // OR:
 // const arrayToString = require('3d-array-to-string').arrayToString;
 

@@ -1,11 +1,11 @@
 /*! 3d-array-to-string (c) 2022 Tomomi Takenaga */
 
-const isIncluded = (sample: any, population: number[]) => {
+function isIncluded(sample: any, population: number[]) {
   const unique = Array.from(new Set(sample));
   return !unique.some((element) => population.every((p) => p !== element));
-};
+}
 
-const arrayToString = (
+export function arrayToString(
   array: any,
   width: number,
   height: number,
@@ -15,7 +15,7 @@ const arrayToString = (
   spacePaddingNumber = 3,
   linePaddingNumber = 0,
   sliceSeparation = "="
-) => {
+) {
   if (array.length !== width * height * nSlices)
     throw new TypeError("Invalid matrix size");
   if (original.length !== conversion.length)
@@ -48,6 +48,4 @@ const arrayToString = (
       ) + "\n";
   }
   return output;
-};
-
-export { arrayToString };
+}

@@ -5,6 +5,7 @@
   "repository": "https://github.com/ttakenaga/3d-array-to-string.git",
   "types": "./index.d.ts",
   "scripts": {
+    "test": "jest --coverage",
     "build": "tsc",
     "prettier": "prettier --write *.ts *.js"
   },
@@ -12,6 +13,7 @@
   "license": "MIT",
   "runkitExampleFilename": "example.js",
   "devDependencies": {
+    "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5"
   }
