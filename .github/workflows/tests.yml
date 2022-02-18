@@ -2,6 +2,9 @@ name: Test
 on: [push]
 jobs:
   tests:
+    defaults:
+      run:
+        working-directory: ./packages/array-to-string
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -12,9 +15,15 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
+        working-directory: ./packages/array-to-string
       - run: npm run build
+        working-directory: ./packages/array-to-string
       - run: npx jest
+        working-directory: ./packages/array-to-string
   coverage:
+    defaults:
+      run:
+        working-directory: ./packages/array-to-string
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,3 +36,4 @@ jobs:
       - uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./packages/array-to-string/coverage/lcov.info
