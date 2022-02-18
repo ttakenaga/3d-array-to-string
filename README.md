@@ -34,7 +34,7 @@ const array = [
   1, 1, 1, 2,
 ];
 console.log(
-  arrayToString(array, 6, 5, 1, [0, 1, 2, 3], ["0", "1", "2", "3"], 0)
+  arrayToString(array, 6, 5, 1, [0, 1, 2, 3], ["0", "1", "2", "3"], 1)
 );
 // 111110
 // 230302
@@ -43,7 +43,7 @@ console.log(
 // 211112
 
 console.log(
-  arrayToString(array, 6, 5, 1, [0, 1, 2, 3], [" ", "_", "|", "."], 0)
+  arrayToString(array, 6, 5, 1, [0, 1, 2, 3], [" ", "_", "|", "."], 1)
 );
 // _____
 // |. . |

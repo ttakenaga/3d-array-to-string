@@ -61,7 +61,7 @@ test("array to string", () => {
       0, 0, 0, 0, 0, 
       0, 0, 0, 0, 0
     ]);
-  const answer = "11111\n00000\n21012\n=====\n11011\n00000\n00000\n=====\n";
+  const answer = "11111\n00000\n21012\n=====\n11011\n00000\n00000\n";
   const output = arrayToString(
     array,
     width,
@@ -71,5 +71,7 @@ test("array to string", () => {
     convert,
     spacePaddingNumber
   );
+  console.log(answer);
+  console.log(output);
   expect(answer === output).toBe(true);
 });

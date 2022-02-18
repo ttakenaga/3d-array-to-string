@@ -43,9 +43,11 @@ export function arrayToString(
       output += "\n".repeat(linePaddingNumber + 1);
     }
     output +=
-      `${sliceSeparation}`.repeat(
-        (spacePaddingNumber / sliceSeparation.length) * width
-      ) + "\n";
+      k === nSlices - 1
+        ? ""
+        : `${sliceSeparation}`.repeat(
+            (spacePaddingNumber / sliceSeparation.length) * width
+          ) + "\n";
   }
   return output;
 }
