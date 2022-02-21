@@ -6,6 +6,14 @@ on:
   workflow_dispatch:
 jobs:
   publish-to-npm:
+    defaults:
+      run:
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      uses:
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,13 +25,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "takenaga"
           always-auth: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Can Publish
-        run: npx can-npm-publish --verbose
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm ci
-      - run: npm publish --access=public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: npx can-npm-publish --verbose
+        run: |
+          npm ci
+          npm publish --access=public
