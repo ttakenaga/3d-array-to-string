@@ -1,6 +1,6 @@
 {
   "name": "3d-array-to-string",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert an array to a string",
   "repository": "https://github.com/ttakenaga/3d-array-to-string.git",
   "types": "./index.d.ts",
